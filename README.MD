@@ -1,6 +1,6 @@
 # PUZZLR
 
-Puzzlr is a decentralized and secure image sharing App for Android and iOS. It uses the [Hyperledger](https://github.com/hyperledger). Puzzlr is made available as a Proof-Of-Concept and should not not be considered as a working product.
+Puzzlr is a decentralized and secure image sharing App for Android and iOS. It uses [Fabric](https://github.com/hyperledger/fabric), a blockchain created by the [Hyperledger Project](https://www.hyperledger.org). Puzzlr is made available as a Proof-Of-Concept and should not not be considered as a "safe" product.
 
 ## Server Installation
 
