@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BC691A14743A1CB50C07AFDC7555BB4FF5CB5C13",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BC691A14743A1CB50C07AFDC7555BB4FF5CB5C13" : 0,
+    "C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53" : 0,
+    "2C28B1DD5070055B39E4A084A7F19A1D2285B789" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6C1772AC-322C-471C-AA02-BDD69BB25320",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BC691A14743A1CB50C07AFDC7555BB4FF5CB5C13" : "Puzzlr\/",
+    "C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53" : "Puzzlr\/CryptoSwift\/",
+    "2C28B1DD5070055B39E4A084A7F19A1D2285B789" : "..\/..\/Downloads\/Heimdall"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Puzzlr",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Puzzlr.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/henrinormak\/Heimdall.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2C28B1DD5070055B39E4A084A7F19A1D2285B789"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/puzzlr\/puzzlr.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BC691A14743A1CB50C07AFDC7555BB4FF5CB5C13"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/krzyzanowskim\/CryptoSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53"
+    }
+  ]
+}

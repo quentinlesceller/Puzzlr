@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		660060421C921BDA00F2F6A7 /* JKBCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660060401C921BDA00F2F6A7 /* JKBCrypt.swift */; };
+		660060431C921BDA00F2F6A7 /* JKBCryptRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660060411C921BDA00F2F6A7 /* JKBCryptRandom.swift */; };
+		660118401C909ADE004B4113 /* UserBlockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601183F1C909ADE004B4113 /* UserBlockchain.swift */; };
+		660118421C90B2AC004B4113 /* PublicKeyBlockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660118411C90B2AC004B4113 /* PublicKeyBlockchain.swift */; };
+		660118441C90BBC4004B4113 /* DataBlockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660118431C90BBC4004B4113 /* DataBlockchain.swift */; };
+		660118461C90BC76004B4113 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660118451C90BC76004B4113 /* Hash.swift */; };
+		66117D481C849C750054A4EB /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66117D471C849C750054A4EB /* ContactViewController.swift */; };
+		66117D4E1C84A8710054A4EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66117D4A1C84A8710054A4EB /* LoginViewController.swift */; };
+		66117D501C84A8710054A4EB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66117D4C1C84A8710054A4EB /* SignUpViewController.swift */; };
+		66117DBE1C84E8E20054A4EB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66117DBD1C84E8E20054A4EB /* Contact.swift */; };
+		66117DC01C84E9C70054A4EB /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66117DBF1C84E9C70054A4EB /* ContactTableViewCell.swift */; };
+		66117DC21C84F7940054A4EB /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66117DC11C84F7940054A4EB /* ContactTableViewController.swift */; };
+		6623AD471C80EB3300857057 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6623AD461C80EB3300857057 /* MenuController.swift */; };
+		6623AD521C80EE9D00857057 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6623AD511C80EE9D00857057 /* SWRevealViewController.m */; };
+		6623AD5D1C810AB200857057 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6623AD5C1C810AB200857057 /* AccountViewController.swift */; };
+		66244DFE1CB6E74900CF3359 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66244DFD1CB6E74900CF3359 /* CryptoSwift.framework */; };
+		66244E001CB6E76A00CF3359 /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 66244DFD1CB6E74900CF3359 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		66244E021CB6E7D200CF3359 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66244E011CB6E7D200CF3359 /* MapKit.framework */; };
+		662853F71C72571000A5C055 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662853F61C72571000A5C055 /* AppDelegate.swift */; };
+		662853F91C72571000A5C055 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662853F81C72571000A5C055 /* ViewController.swift */; };
+		662853FC1C72571000A5C055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662853FA1C72571000A5C055 /* Main.storyboard */; };
+		662853FE1C72571000A5C055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662853FD1C72571000A5C055 /* Assets.xcassets */; };
+		662854011C72571000A5C055 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662853FF1C72571000A5C055 /* LaunchScreen.storyboard */; };
+		6628540C1C72571100A5C055 /* PuzzlrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628540B1C72571100A5C055 /* PuzzlrTests.swift */; };
+		662854171C7257D600A5C055 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662854161C7257D600A5C055 /* MessageViewController.swift */; };
+		6628541D1C72592D00A5C055 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628541C1C72592D00A5C055 /* Message.swift */; };
+		6628541E1C72592D00A5C055 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628541C1C72592D00A5C055 /* Message.swift */; };
+		662854201C72598C00A5C055 /* MessageTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628541F1C72598C00A5C055 /* MessageTableVIewController.swift */; };
+		662854221C7259B300A5C055 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662854211C7259B300A5C055 /* MessageTableViewCell.swift */; };
+		668234141CA34DE600B065FE /* CryptoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668234131CA34DE600B065FE /* CryptoMessage.swift */; };
+		669430231CACA1B70072C704 /* CryptoExportImportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669430221CACA1B70072C704 /* CryptoExportImportManager.swift */; };
+		6694302A1CAD67920072C704 /* RSAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669430291CAD67920072C704 /* RSAUtils.swift */; };
+		669430301CAD6F430072C704 /* SwiftyRSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6694302F1CAD6F430072C704 /* SwiftyRSA.swift */; };
+		669E7EAB1CA2F7FB00A1ACFA /* AsymmetricCryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669E7EAA1CA2F7FB00A1ACFA /* AsymmetricCryptoManager.swift */; };
+		66AB4E501CB6B66600632365 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AB4E4F1CB6B66600632365 /* Server.swift */; };
+		66BAA32B1C8F7E4F00A296AC /* UrlTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BAA32A1C8F7E4F00A296AC /* UrlTools.swift */; };
+		66BAA32D1C8F7E5D00A296AC /* Hyperledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BAA32C1C8F7E5D00A296AC /* Hyperledger.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		662854081C72571100A5C055 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 662853EB1C72571000A5C055 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 662853F21C72571000A5C055;
+			remoteInfo = Puzzlr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66AB4E771CB6E40900632365 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				66244E001CB6E76A00CF3359 /* CryptoSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B474371C7BBBB200E67A3A /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		660060401C921BDA00F2F6A7 /* JKBCrypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JKBCrypt.swift; path = Puzzlr/Crypto/Bcrypt/JKBCrypt.swift; sourceTree = "<group>"; };
+		660060411C921BDA00F2F6A7 /* JKBCryptRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JKBCryptRandom.swift; path = Puzzlr/Crypto/Bcrypt/JKBCryptRandom.swift; sourceTree = "<group>"; };
+		6601183F1C909ADE004B4113 /* UserBlockchain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserBlockchain.swift; path = Hyperledger/UserBlockchain.swift; sourceTree = "<group>"; };
+		660118411C90B2AC004B4113 /* PublicKeyBlockchain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicKeyBlockchain.swift; path = Hyperledger/PublicKeyBlockchain.swift; sourceTree = "<group>"; };
+		660118431C90BBC4004B4113 /* DataBlockchain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataBlockchain.swift; path = Hyperledger/DataBlockchain.swift; sourceTree = "<group>"; };
+		660118451C90BC76004B4113 /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hash.swift; path = Crypto/Hash.swift; sourceTree = "<group>"; };
+		66117D471C849C750054A4EB /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactViewController.swift; path = Contact/ContactViewController.swift; sourceTree = "<group>"; };
+		66117D4A1C84A8710054A4EB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = LoginSignup/LoginViewController.swift; sourceTree = "<group>"; };
+		66117D4C1C84A8710054A4EB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = LoginSignup/SignUpViewController.swift; sourceTree = "<group>"; };
+		66117DBD1C84E8E20054A4EB /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Contact/Contact.swift; sourceTree = "<group>"; };
+		66117DBF1C84E9C70054A4EB /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewCell.swift; path = Contact/ContactTableViewCell.swift; sourceTree = "<group>"; };
+		66117DC11C84F7940054A4EB /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewController.swift; path = Contact/ContactTableViewController.swift; sourceTree = "<group>"; };
+		6623AD461C80EB3300857057 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = Menu/MenuController.swift; sourceTree = "<group>"; };
+		6623AD4F1C80EE9C00857057 /* Puzzlr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Puzzlr-Bridging-Header.h"; sourceTree = "<group>"; };
+		6623AD501C80EE9D00857057 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
+		6623AD511C80EE9D00857057 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
+		6623AD5C1C810AB200857057 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountViewController.swift; path = Account/AccountViewController.swift; sourceTree = "<group>"; };
+		66244DFD1CB6E74900CF3359 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Frameworks/CryptoSwift.framework; sourceTree = "<group>"; };
+		66244E011CB6E7D200CF3359 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		662853F31C72571000A5C055 /* Puzzlr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzlr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		662853F61C72571000A5C055 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		662853F81C72571000A5C055 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		662853FB1C72571000A5C055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		662853FD1C72571000A5C055 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		662854001C72571000A5C055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		662854021C72571000A5C055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		662854071C72571100A5C055 /* PuzzlrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzzlrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6628540B1C72571100A5C055 /* PuzzlrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzlrTests.swift; sourceTree = "<group>"; };
+		6628540D1C72571100A5C055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		662854161C7257D600A5C055 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Message/MessageViewController.swift; sourceTree = "<group>"; };
+		6628541C1C72592D00A5C055 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Message/Message.swift; sourceTree = "<group>"; };
+		6628541F1C72598C00A5C055 /* MessageTableVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageTableVIewController.swift; path = Message/MessageTableVIewController.swift; sourceTree = "<group>"; };
+		662854211C7259B300A5C055 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageTableViewCell.swift; path = Message/MessageTableViewCell.swift; sourceTree = "<group>"; };
+		668234131CA34DE600B065FE /* CryptoMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CryptoMessage.swift; path = Crypto/CryptoMessage.swift; sourceTree = "<group>"; };
+		669430221CACA1B70072C704 /* CryptoExportImportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CryptoExportImportManager.swift; path = Crypto/RSA/CryptoExportImportManager.swift; sourceTree = "<group>"; };
+		669430291CAD67920072C704 /* RSAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RSAUtils.swift; path = Crypto/RSA/RSAUtils.swift; sourceTree = "<group>"; };
+		6694302F1CAD6F430072C704 /* SwiftyRSA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyRSA.swift; path = Crypto/RSA/SwiftyRSA.swift; sourceTree = "<group>"; };
+		669E7EAA1CA2F7FB00A1ACFA /* AsymmetricCryptoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsymmetricCryptoManager.swift; path = Crypto/RSA/AsymmetricCryptoManager.swift; sourceTree = "<group>"; };
+		66AB4E4F1CB6B66600632365 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		66BAA32A1C8F7E4F00A296AC /* UrlTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlTools.swift; path = Hyperledger/Tools/UrlTools.swift; sourceTree = "<group>"; };
+		66BAA32C1C8F7E5D00A296AC /* Hyperledger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hyperledger.swift; path = Hyperledger/Hyperledger.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		662853F01C72571000A5C055 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66244E021CB6E7D200CF3359 /* MapKit.framework in Frameworks */,
+				66244DFE1CB6E74900CF3359 /* CryptoSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		662854041C72571100A5C055 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		660060301C9219C900F2F6A7 /* Bcrypt */ = {
+			isa = PBXGroup;
+			children = (
+				660060401C921BDA00F2F6A7 /* JKBCrypt.swift */,
+				660060411C921BDA00F2F6A7 /* JKBCryptRandom.swift */,
+			);
+			name = Bcrypt;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		66117D3F1C849A570054A4EB /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				662854161C7257D600A5C055 /* MessageViewController.swift */,
+				6628541C1C72592D00A5C055 /* Message.swift */,
+				6628541F1C72598C00A5C055 /* MessageTableVIewController.swift */,
+				662854211C7259B300A5C055 /* MessageTableViewCell.swift */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		66117D401C849A620054A4EB /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				6623AD5C1C810AB200857057 /* AccountViewController.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		66117D411C849A6B0054A4EB /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				6623AD461C80EB3300857057 /* MenuController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		66117D421C849A8A0054A4EB /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				66117D471C849C750054A4EB /* ContactViewController.swift */,
+				66117DBD1C84E8E20054A4EB /* Contact.swift */,
+				66117DBF1C84E9C70054A4EB /* ContactTableViewCell.swift */,
+				66117DC11C84F7940054A4EB /* ContactTableViewController.swift */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		66117D491C84A8600054A4EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66244E011CB6E7D200CF3359 /* MapKit.framework */,
+				66244DFD1CB6E74900CF3359 /* CryptoSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66117D521C84A87F0054A4EB /* LoginSignup */ = {
+			isa = PBXGroup;
+			children = (
+				66117D4A1C84A8710054A4EB /* LoginViewController.swift */,
+				66117D4C1C84A8710054A4EB /* SignUpViewController.swift */,
+			);
+			name = LoginSignup;
+			sourceTree = "<group>";
+		};
+		6623AD4E1C80EE6500857057 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6623AD501C80EE9D00857057 /* SWRevealViewController.h */,
+				6623AD511C80EE9D00857057 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		662853EA1C72571000A5C055 = {
+			isa = PBXGroup;
+			children = (
+				66BAA3271C8F7E2F00A296AC /* Hyperledger */,
+				66117D491C84A8600054A4EB /* Frameworks */,
+				662853F51C72571000A5C055 /* Puzzlr */,
+				6628540A1C72571100A5C055 /* PuzzlrTests */,
+				662853F41C72571000A5C055 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		662853F41C72571000A5C055 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				662853F31C72571000A5C055 /* Puzzlr.app */,
+				662854071C72571100A5C055 /* PuzzlrTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		662853F51C72571000A5C055 /* Puzzlr */ = {
+			isa = PBXGroup;
+			children = (
+				6623AD4E1C80EE6500857057 /* SWRevealViewController */,
+				6623AD4F1C80EE9C00857057 /* Puzzlr-Bridging-Header.h */,
+				669E7EA51CA2F7EA00A1ACFA /* Crypto */,
+				662853F61C72571000A5C055 /* AppDelegate.swift */,
+				662853F81C72571000A5C055 /* ViewController.swift */,
+				662853FA1C72571000A5C055 /* Main.storyboard */,
+				662853FD1C72571000A5C055 /* Assets.xcassets */,
+				662853FF1C72571000A5C055 /* LaunchScreen.storyboard */,
+				662854021C72571000A5C055 /* Info.plist */,
+				66117D411C849A6B0054A4EB /* Menu */,
+				66117D521C84A87F0054A4EB /* LoginSignup */,
+				66117D3F1C849A570054A4EB /* Message */,
+				66117D401C849A620054A4EB /* Account */,
+				66117D421C849A8A0054A4EB /* Contact */,
+				66AB4E4F1CB6B66600632365 /* Server.swift */,
+			);
+			path = Puzzlr;
+			sourceTree = "<group>";
+		};
+		6628540A1C72571100A5C055 /* PuzzlrTests */ = {
+			isa = PBXGroup;
+			children = (
+				6628540B1C72571100A5C055 /* PuzzlrTests.swift */,
+				6628540D1C72571100A5C055 /* Info.plist */,
+			);
+			path = PuzzlrTests;
+			sourceTree = "<group>";
+		};
+		669E7EA51CA2F7EA00A1ACFA /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				66AB4E5A1CB6DC5A00632365 /* RSA */,
+				660060301C9219C900F2F6A7 /* Bcrypt */,
+				668234131CA34DE600B065FE /* CryptoMessage.swift */,
+				660118451C90BC76004B4113 /* Hash.swift */,
+			);
+			name = Crypto;
+			sourceTree = "<group>";
+		};
+		66AB4E5A1CB6DC5A00632365 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				669E7EAA1CA2F7FB00A1ACFA /* AsymmetricCryptoManager.swift */,
+				669430221CACA1B70072C704 /* CryptoExportImportManager.swift */,
+				669430291CAD67920072C704 /* RSAUtils.swift */,
+				6694302F1CAD6F430072C704 /* SwiftyRSA.swift */,
+			);
+			name = RSA;
+			sourceTree = "<group>";
+		};
+		66BAA3271C8F7E2F00A296AC /* Hyperledger */ = {
+			isa = PBXGroup;
+			children = (
+				6601183F1C909ADE004B4113 /* UserBlockchain.swift */,
+				660118411C90B2AC004B4113 /* PublicKeyBlockchain.swift */,
+				660118431C90BBC4004B4113 /* DataBlockchain.swift */,
+				66BAA32C1C8F7E5D00A296AC /* Hyperledger.swift */,
+				66BAA3291C8F7E3F00A296AC /* Tools */,
+			);
+			name = Hyperledger;
+			sourceTree = "<group>";
+		};
+		66BAA3291C8F7E3F00A296AC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				66BAA32A1C8F7E4F00A296AC /* UrlTools.swift */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		662853F21C72571000A5C055 /* Puzzlr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 662854101C72571100A5C055 /* Build configuration list for PBXNativeTarget "Puzzlr" */;
+			buildPhases = (
+				662853EF1C72571000A5C055 /* Sources */,
+				662853F01C72571000A5C055 /* Frameworks */,
+				662853F11C72571000A5C055 /* Resources */,
+				66B474371C7BBBB200E67A3A /* Embed PlugIns */,
+				66AB4E771CB6E40900632365 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Puzzlr;
+			productName = Puzzlr;
+			productReference = 662853F31C72571000A5C055 /* Puzzlr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		662854061C72571100A5C055 /* PuzzlrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 662854131C72571100A5C055 /* Build configuration list for PBXNativeTarget "PuzzlrTests" */;
+			buildPhases = (
+				662854031C72571100A5C055 /* Sources */,
+				662854041C72571100A5C055 /* Frameworks */,
+				662854051C72571100A5C055 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				662854091C72571100A5C055 /* PBXTargetDependency */,
+			);
+			name = PuzzlrTests;
+			productName = PuzzlrTests;
+			productReference = 662854071C72571100A5C055 /* PuzzlrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		662853EB1C72571000A5C055 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Quentin Le Sceller";
+				TargetAttributes = {
+					662853F21C72571000A5C055 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9K3SQ64X5H;
+					};
+					662854061C72571100A5C055 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9K3SQ64X5H;
+						TestTargetID = 662853F21C72571000A5C055;
+					};
+				};
+			};
+			buildConfigurationList = 662853EE1C72571000A5C055 /* Build configuration list for PBXProject "Puzzlr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 662853EA1C72571000A5C055;
+			productRefGroup = 662853F41C72571000A5C055 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				662853F21C72571000A5C055 /* Puzzlr */,
+				662854061C72571100A5C055 /* PuzzlrTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		662853F11C72571000A5C055 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				662854011C72571000A5C055 /* LaunchScreen.storyboard in Resources */,
+				662853FE1C72571000A5C055 /* Assets.xcassets in Resources */,
+				662853FC1C72571000A5C055 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		662854051C72571100A5C055 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		662853EF1C72571000A5C055 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669430231CACA1B70072C704 /* CryptoExportImportManager.swift in Sources */,
+				6623AD471C80EB3300857057 /* MenuController.swift in Sources */,
+				66117DC21C84F7940054A4EB /* ContactTableViewController.swift in Sources */,
+				662854221C7259B300A5C055 /* MessageTableViewCell.swift in Sources */,
+				66BAA32B1C8F7E4F00A296AC /* UrlTools.swift in Sources */,
+				660060431C921BDA00F2F6A7 /* JKBCryptRandom.swift in Sources */,
+				66117DBE1C84E8E20054A4EB /* Contact.swift in Sources */,
+				662853F91C72571000A5C055 /* ViewController.swift in Sources */,
+				660118421C90B2AC004B4113 /* PublicKeyBlockchain.swift in Sources */,
+				66117D481C849C750054A4EB /* ContactViewController.swift in Sources */,
+				660118401C909ADE004B4113 /* UserBlockchain.swift in Sources */,
+				66AB4E501CB6B66600632365 /* Server.swift in Sources */,
+				6628541D1C72592D00A5C055 /* Message.swift in Sources */,
+				662854171C7257D600A5C055 /* MessageViewController.swift in Sources */,
+				669E7EAB1CA2F7FB00A1ACFA /* AsymmetricCryptoManager.swift in Sources */,
+				669430301CAD6F430072C704 /* SwiftyRSA.swift in Sources */,
+				660118461C90BC76004B4113 /* Hash.swift in Sources */,
+				6694302A1CAD67920072C704 /* RSAUtils.swift in Sources */,
+				66117D501C84A8710054A4EB /* SignUpViewController.swift in Sources */,
+				6623AD521C80EE9D00857057 /* SWRevealViewController.m in Sources */,
+				660060421C921BDA00F2F6A7 /* JKBCrypt.swift in Sources */,
+				66BAA32D1C8F7E5D00A296AC /* Hyperledger.swift in Sources */,
+				662854201C72598C00A5C055 /* MessageTableVIewController.swift in Sources */,
+				668234141CA34DE600B065FE /* CryptoMessage.swift in Sources */,
+				662853F71C72571000A5C055 /* AppDelegate.swift in Sources */,
+				66117D4E1C84A8710054A4EB /* LoginViewController.swift in Sources */,
+				6623AD5D1C810AB200857057 /* AccountViewController.swift in Sources */,
+				660118441C90BBC4004B4113 /* DataBlockchain.swift in Sources */,
+				66117DC01C84E9C70054A4EB /* ContactTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		662854031C72571100A5C055 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6628540C1C72571100A5C055 /* PuzzlrTests.swift in Sources */,
+				6628541E1C72592D00A5C055 /* Message.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		662854091C72571100A5C055 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 662853F21C72571000A5C055 /* Puzzlr */;
+			targetProxy = 662854081C72571100A5C055 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		662853FA1C72571000A5C055 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				662853FB1C72571000A5C055 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		662853FF1C72571000A5C055 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				662854001C72571000A5C055 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6628540E1C72571100A5C055 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6628540F1C72571100A5C055 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		662854111C72571100A5C055 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Puzzlr",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = Puzzlr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.concordia.Puzzlr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Puzzlr/Puzzlr-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		662854121C72571100A5C055 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Puzzlr",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = Puzzlr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.concordia.Puzzlr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Puzzlr/Puzzlr-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		662854141C72571100A5C055 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PuzzlrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.concordia.PuzzlrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Puzzlr.app/Puzzlr";
+			};
+			name = Debug;
+		};
+		662854151C72571100A5C055 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PuzzlrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.concordia.PuzzlrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Puzzlr.app/Puzzlr";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		662853EE1C72571000A5C055 /* Build configuration list for PBXProject "Puzzlr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6628540E1C72571100A5C055 /* Debug */,
+				6628540F1C72571100A5C055 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		662854101C72571100A5C055 /* Build configuration list for PBXNativeTarget "Puzzlr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				662854111C72571100A5C055 /* Debug */,
+				662854121C72571100A5C055 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		662854131C72571100A5C055 /* Build configuration list for PBXNativeTarget "PuzzlrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				662854141C72571100A5C055 /* Debug */,
+				662854151C72571100A5C055 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 662853EB1C72571000A5C055 /* Project object */;
+}
