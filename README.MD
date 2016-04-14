@@ -42,4 +42,4 @@ Many thanks to the developper of SwiftyRSA, Swift-RSAUtils, AsymmetricCryptoMana
 
 ## License
 
-This software is made available under MIT License : [Chaincode](Chaincode/LICENSE), [iOS](iOS/Puzzlr/LICENSE), Android (Android/Puzzlr/LICENSE).
+This software is made available under MIT License : [Chaincode](Chaincode/LICENSE), [iOS](iOS/Puzzlr/LICENSE), [Android](Android/Puzzlr/LICENSE).
