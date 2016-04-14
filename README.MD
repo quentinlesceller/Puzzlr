@@ -11,7 +11,7 @@ Puzzlr is a decentralized and secure image sharing App for Android and iOS. It u
 
 ## Client Installation and Usage
 
-
+## Installation
 
 ### iOS
 
@@ -19,7 +19,7 @@ Open this project with XCode, Build and install it on your device. Be sure to re
 
 ### Android
 
-**to be written**
+See [Android's README](Android/Puzzlr/README.MD)
 
 ## Usage
 
@@ -29,6 +29,8 @@ Puzzlr is meant to be intuitive and easy to use. Just create an account. If you 
 On the other device just pull down to refresh and see the message.
 
 ### Android Version
+
+See [Android's README](Android/Puzzlr/README.MD)
 
 **to be written**
 
