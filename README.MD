@@ -19,7 +19,7 @@ Open this project with XCode, Build and install it on your device. Be sure to re
 
 ### Android
 
-See [Android's README](Android/Puzzlr/README.MD)
+See [Android's versions README](Android/Puzzlr/README.MD).
 
 ## Usage
 
@@ -30,9 +30,7 @@ On the other device just pull down to refresh and see the message.
 
 ### Android Version
 
-See [Android's README](Android/Puzzlr/README.MD)
-
-**to be written**
+See [Android's versions README](Android/Puzzlr/README.MD).
 
 ## Credits
 
