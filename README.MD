@@ -2,9 +2,10 @@
 
 Puzzlr is a decentralized and secure image sharing App for Android and iOS. It uses [Fabric](https://github.com/hyperledger/fabric), a blockchain created by the [Hyperledger Project](https://www.hyperledger.org). Puzzlr is made available as a Proof-Of-Concept and should not not be considered as a "safe" product.
 
+
 ## Server Installation
 
-- Copy the chaincode files into your Open Blockchain virtual machine.
+- Copy the chaincode files into your Fabric's' virtual machine.
 - In the VM, run `go get` in chaincode_user folder to get bcrypt.
 - Launch obc-peer.
 - Deploy the 3 chaincodes.
