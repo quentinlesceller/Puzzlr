@@ -11,37 +11,35 @@ Puzzlr is a decentralized and secure image sharing App for Android and iOS. It u
 
 ## Client Installation and Usage
 
-### Android
+
 
 ### iOS
 
 Open this project with XCode, Build and install it on your device. Be sure to replace the IP with the IP of your Open Blockchain server.
 
+### Android
+
+**to be written**
+
 ## Usage
-
-### Android Version
-
-
 
 ### iOS Version
 
 Puzzlr is meant to be intuitive and easy to use. Just create an account. If you want to send a picture to someone, you need to add him in the "Contact" menu. Then you can go back to the "Send/Receive" menu and create a new message. Just press send.
 On the other device just pull down to refresh and see the message.
 
+### Android Version
+
+**to be written**
+
 ## Credits
 
 Thanks to all IBM Open Blockchain developpers.
-
-### Android Version
 
 ### iOS Version
 
 Many thanks to the developper of SwiftyRSA, Swift-RSAUtils, AsymmetricCryptoManager, CryptoImportExportManager, SWRevealViewController and CryptoSwift.
 
 ## License
-
-### Android Version
-
-### iOS Version
 
 This software is made available under the [MIT License](LICENSE).
