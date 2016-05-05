@@ -1,0 +1,86 @@
+\section{General Architecture}
+    \paragraph{}
+    In this part, we present a global overview over Puzzlr's architecture. We used a semi-decentralized scheme where in each session, there are three major participating parties (figure 1).
+      \begin{figure}[H]   
+	\centering
+	\includegraphics[width=16cm]{images/architecture/architecture}
+	\caption{Puzzlr: General Architecture.}
+	\label{Figure 1}
+      \end{figure}
+      \subsection{Registration Phase}
+      
+	\paragraph{}
+	  When two clients want to register on the application, say Alice and Bob, they will both generate an RSA key pair. Their respective public keys are then sent to the server to be stored on the database (figure 2).
+	  
+	  \begin{figure}[H]  
+	    \centering
+	    \includegraphics[width=8cm]{images/architecture/registrationsequence}
+	    \caption{Registration phase Sequence Diagram.}
+	  \end{figure}
+	  \subsection{Retrieval of Correspondant's Public key}
+	  \paragraph{}
+	  
+	    If let's say Alice wants to send a message to Bob, she will first have to find his corresponding public key. To achieve that, she will send a request to the server which will query the database to check if Alice and Bob are both registered first, if that is the case, the server will then send Bob's public key to Alice (figure 3).
+	    
+	    \begin{figure}[H]
+	      \centering
+	      \includegraphics[width=7cm]{images/architecture/requestingcorrespondant'sRSApublickey}
+	      \caption{Requesting Correspondant's RSA public key Sequence Diagram.}
+	    \end{figure}
+	    
+	    
+	    \subsection{Sending and Receiving Picture}
+	    \paragraph{}
+	    
+	    After retrieving Bob's public key from the server, Alice will now do the following steps (figure 4):
+	    
+	    \begin{itemize}
+	     \item Choose a picture to send.
+	     \item Generate a session key (AES) and a MAC key.
+	     \item Generate a random IV.
+	     \item Encrypt the AES key, the MAC key, and her username using Bob's public key (message 1).
+	     \item Encrypt the picture that she picked with the AES key and the IV (message 2).
+	     \item Generate a MAC tag using the MAC key on the second message (message 2) and the IV (message 3).
+	     \item Send the three messages to the server concatenated (message 1 + message 2 + message 3).
+	    \end{itemize}
+	    
+	    \begin{figure}[H]
+	    
+	      \centering
+	      \includegraphics[width=8cm]{images/architecture/picture_sending}
+	      \caption{Picture Sending}
+	     
+	    \end{figure}
+	    
+	    \paragraph{}
+	      On the other hand, when the server receives Alice's message, it will forward this message to Bob. Bob will receive the message and (figure 5):
+	      \begin{itemize}
+	       \item Recovers the AES key, MAC key, and Alice's username using his private key.
+	       \item Checks if the MAC tag received is valid by computing a new one on the received AES ciphertext and the IV, and then compares between them.
+	       \item Finally, recovers the picture using the recovered AES key and the IV.
+	      \end{itemize}
+
+	    \begin{figure}[H]
+	    
+	      \centering
+	      \includegraphics[width=8cm]{images/architecture/receive}
+	      \caption{Picture Receival}
+	     
+	    \end{figure}
+
+	    
+	    
+	    
+
+
+
+
+	  
+      
+      
+     
+      
+
+
+	
+  

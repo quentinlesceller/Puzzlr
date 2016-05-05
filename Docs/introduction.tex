@@ -1,0 +1,15 @@
+\section{Introduction}
+   \paragraph{}
+    Today, mobile applications are covering different palettes of services. Ranging from worldwide daily news, gaming and other entertainment services to social networking and educational services, and from sports, music, and financial services to lifestyle and many other categories.
+   \paragraph{}
+    Amongst these categories, photo and video applications are increasingly used these days. They allow user to take pictures, record videos, and share them with their friends. Snapchat is a famous example of these, where the user takes an ephemeral or temporal pictures which will be sent to his friends. When the other user receives the pictures, he will be able to see it for only few seconds and then the image is removed from his device.
+    \paragraph{}
+    However,most of the time, in the terms of services of these services we can find paragraph such as the following from Snapchat :
+    \paragraph{}
+    \textbf{\textit{\enquote{For all Services[...], you grant Snapchat a worldwide, royalty-free, sublicensable, and transferable license to host, store, use, display, reproduce, modify, adapt, edit, publish, and distribute the content.}}}
+    \paragraph{}
+    As the above infers, when the user sends a picture to another one, this picture will be stored by the application's server on a specific database and maybe not securely. This is a major problem, especially when people are sharing personal and private images.
+    \paragraph{}
+    In this project, we developed a mobile application for Android and IOS, in which we tackle the problem of image sharing by using strong cryptographic primitives to provide data confidentiality and integrity during the whole exchange process. This solution provides secure communications between the clients and the server in order to securely exchange session keys which are used then to encrypt images shared between different clients of the application. Moreover, the backend rely on Fabric, a decentralized server in order to avoid government censorship and downtime.
+    \paragraph{}
+    The paper will be organized as follows: we first describe the general architecture of Puzzlr and how it works. Then we describe the cryptographic primitives and methods used. We also cover the three main implementations: Android, IOS, and the Server side. In the last part, we detail the future work.

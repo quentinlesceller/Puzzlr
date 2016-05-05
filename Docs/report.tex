@@ -1,0 +1,66 @@
+%-----Main FIle------
+\documentclass[12pt,a4paper]{article}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES 
+%----------------------------------------------------------------------------------------
+%adjust your page margins here
+\usepackage[top=1.00in, bottom=1.00in, left=1.00in,right=0.80in]{geometry} % setting the page alignment with this package
+\usepackage{titlesec}
+\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
+\usepackage{float} %used for figure placement with H as a parameter
+\usepackage{array} % for making text bold in table
+\usepackage{tikz}
+\usepackage{csquotes}
+\usepackage{url}
+\usepackage{fancyhdr} %For the header and footer
+
+\fancypagestyle{plain}{%
+\fancyfoot[L]{} % except the center
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
+
+%----------------------------------------------------------------------------------------
+%	FOOTER AND FOOTER 
+%----------------------------------------------------------------------------------------
+\fancyfoot[LO,LE]{}
+\cfoot{}
+\fancyfoot[RO, RE]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT 
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% includes the cover page
+\input{cover.tex} 
+\newpage
+\pagestyle{fancy}
+
+
+\pagenumbering{arabic}
+
+\tableofcontents % adds Index Page
+\newpage
+
+\listoffigures % adds List of Figures
+\newpage
+
+\listoftables
+\newpage
+
+\input{abstract.tex}
+\input{introduction.tex}
+\input{architecture.tex}
+\newpage
+\input{cryptography.tex}
+\input{implementations.tex}
+\input{future.tex}
+\end{document}

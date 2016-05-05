@@ -1,0 +1,84 @@
+\section{Cryptography}
+  \subsection{Client-Server Communications}
+	\paragraph{}
+		For such mobile application, we need to be sure that the data exchanged between the server and the client cannnot be tampered with.
+	\paragraph{}
+		In order to secure the communications between the client and the server, we used TLS 1.2 with a strong preferred cipher suite. In our case, we chooses ECDHE for key exchange mechanism, RSA for the authentication, AES (128 bits) in GCM mode and SHA256 for the MAC.
+		With OpenSSL enabled, we guarantee confidentiality, integrity  and authentication between the client and the server.
+	\paragraph{}
+		Moreover, all the requests to the server are authenticated in order to prevent spam and denial-of-service (DOS) attacks.
+  \subsection{Password Storage}
+  	\paragraph{}
+		All password are hashed on the server-side with bcrypt\footnote{\url{http://bcrypt.sourceforge.net/}} using 10 rounds. It guarantees that all passwords on the database are protected.
+  \subsection{Data Encryption}
+    \paragraph{}
+      In this section, we are going to discuss some cryptographic primitives that we used in the developpement of our application in order to secure the data exchange between different participants and to provide confidentiality.
+      
+      \subsubsection{Image Encryption}
+	\paragraph{}
+	For images encryption, we have chosen a secure block cipher cryptosystem, Advanced Encryption Standard (AES). As a reminder of how AES works, it takes as input an AES key (128, 192, 256 bits length) and an Initialization Vector(IV) of 16 bytes (128 bits) length and a plaintext of any size.
+	\paragraph{}
+	The algorithm starts first by dividing the plaintext into multiple blocks (each one has the same size as the key), this leads in general to the issue where the size of the plaintext is not a multiple of the size of the key. This is why we are obliged to pad the plaintext to make it multiple of the key size when the problem occurs.
+	\paragraph{}
+	Why did we choose to work with AES, why not with another algorithm like 3DES (Triple Data Encryption Standard) ? Well, the answer can be given as follows:
+	\begin{itemize}
+	 \item AES is more secure and is less vulnerable to cryptanalysis unlike 3DES.
+	 \item AES supports larger key sizes than 3DES and thus larger block sizes. And this makes AES less vulnerable to attacks like $\textit{Birthday Paradox problem}$ than 3DES.
+	 \item AES is faster in both hardware and software.
+	 \item 3DES is breakable while AES is still unbreakable.
+	 \item AES uses substitution-permutation which are much more faster operations than $\textit{Feistel Networks}$ which are used by DES.
+	\end{itemize}
+
+	
+	\subsubsection{Key Encryption}
+	\paragraph{}
+	  If Alice and Bob need to exchange an encrypted picture, they need first to securely exchange the session AES key. This is achieved by using the public key encryption (asymmetric encryption).
+	  \paragraph{}
+	    In this work, we used the cryptosystem Rivest Shamir Adleman (RSA). When Alice and Bob register, they generate an RSA keypair, private key and public key. As their name infer, the public key is distributed to all the participants while the private key must be stored in a very secure manner and only its owner ought to know it.
+	  \paragraph{}
+	    In public key encryption schemes, the public key of your correspondant is used to encrypt the data. And when your correspondant receives this encrypted data, he will be the only one able to reverse the process with his/her private key.
+	  \paragraph{}
+	    The participant that wants to establish a session (let's say Alice) (send a picture) with the other will first generate the AES session key, then she will use Bob's public key to encrypt this AES key. In that way, only Bob can decrypt the message using his private key and thus the secure exchange of AES sessions keys is ensured. In this project, because RSA encryption is really consuming and takes much more time, we used the basic and minimal size for the size of the keypair which is 2048 bits (but it is still secure enough).
+
+	
+      \subsection{Data Integrity}
+      
+	As for data integrity, we used Message Authentication Codes (MAC). The process consists of generating a MAC key of 32 bytes long using the following algorithm: $\textbf{\textit{HMACSHA512}}$.
+	Then a MAC tag is computed on the AES ciphertext and the IV using this key.
+	
+	\paragraph{}
+	Table 1 briefly describes all the cryptographic primitives that we discussed above:
+	\newpage
+	\begin{table}[H]
+	 \centering
+	  \begin{tabular}{| p{5.2cm} | p{5cm} | p{5cm} |}
+	  \hline
+	    \textbf{\textit{Symmetric Encryption}}  & \textbf{\textit{Description}}  & \textbf{\textit{Size}} \\ \hline
+	    \textbf{\textit{Key}}  & Generated using a PBKDF2 (Password-Based Key Derivation Function 2) with 10000 iterations and a random salt. & 32 bytes or 256 bits length. \\ \hline
+	    \textbf{\textit{IV}}  & Generated using a PBKDF2 also with the same iterations and a random salt. & 16 bytes or 128 bits length. \\ \hline
+	    \textbf{\textit{Mode}}  & CBC (Cipher Block Chaining) which ensures the transmission of the randomness of the IV from the first block cipher to the rest of them. & each block has the same size of the key (256 bits). \\ \hline
+	    \textbf{\textit{Padding}} & PKCS5Padding which works as the following:
+		      \begin{itemize}
+			\item The number of bytes to be padded equals to: 8 - ((the number of bytes of the plaintext) mod 8 ).
+			\item All padded bytes have the same value as the number of bytes to be added.
+		      \end{itemize} 
+		      & From 1 to 8 bytes \\
+		      \hline
+	    \textbf{\textit{Asymmetric Encryption}} & \textbf{\textit{Description}} & \textbf{\textit{Size}} \\ \hline
+	    \textbf{\textit{Private key}} & Stored securely on its owner device and knwon only by him/her and used for decryption. & 2048 bits. \\ \hline
+	    \textbf{\textit{Public key}} & Distributed to all the other parties and used for encryption. & 2048 bits. \\ \hline
+	    \textbf{\textit{Ciphertext}} & Computed only on the AES key, MAC key. & Depends on the \textit{Modulus} size (always equal to its size). \\ \hline
+	    \textbf{\textit{MAC}} & \textbf{\textit{Description}} & \textbf{\textit{Size}} \\ \hline
+	    \textbf{\textit{Key}} & Generated using \textbf{\textit{HmacSHA512}} algorithm specification. & 256 bits. \\ \hline
+	    \textbf{\textit{tag}} & Computed only on the AES ciphertext and the IV. & 256 bits. \\ \hline
+
+	\end{tabular}
+	
+	\caption{Cryptographic primitives.}
+	\label{Table 1}
+	
+	\end{table}
+	\newpage
+
+
+	
